@@ -1,0 +1,13 @@
+:root {
+    --primary: #1B3C53;
+    --secondary: #234C6A;
+    --accent: #456882;
+    --light-bg: #E3E3E3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+}
