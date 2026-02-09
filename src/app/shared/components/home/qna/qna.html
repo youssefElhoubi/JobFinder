@@ -1,0 +1,25 @@
+<div class="space-y-4 max-w-3xl mx-auto my-10">
+    @for (item of faqs; track $index) {
+
+    <div
+        class="border border-gray-200 rounded-lg bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+
+        <button (click)="toggle($index)"
+            class="w-full flex justify-between items-center p-5 text-left bg-white focus:outline-none">
+            <span class="font-semibold text-secondary text-lg">{{ item.question }}</span>
+
+            <span class="text-accent text-2xl transform transition-transform duration-300"
+                [class.rotate-45]="item.isOpen">
+                +
+            </span>
+        </button>
+
+        <div class="bg-gray-50 text-gray-600 px-5 transition-all duration-300 overflow-hidden"
+            [class.max-h-0]="!item.isOpen" [class.max-h-40]="item.isOpen" [class.py-0]="!item.isOpen"
+            [class.py-5]="item.isOpen">
+            <p>{{ item.answer }}</p>
+        </div>
+
+    </div>
+    }
+</div>
