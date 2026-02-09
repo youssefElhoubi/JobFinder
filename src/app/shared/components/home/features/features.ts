@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './features.css',
 })
 export class Features {
+  features = [
+    { title: 'AI Matching', desc: 'We match your skills to the perfect role.' },
+    { title: 'Remote First', desc: 'Thousands of work-from-home opportunities.' },
+    { title: 'Quick Apply', desc: 'Apply to jobs with just one click.' }
+  ];
 
 }
