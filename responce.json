@@ -1,0 +1,330 @@
+{
+    "mean": 144310.71,
+    "count": 65257,
+    "results": [
+        {
+            "redirect_url": "https://www.adzuna.com/land/ad/5620533921?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=D3290AFC1726208265C2825291EC7D34AF696E04",
+            "id": "5620533921",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Magnus Technology Solutions"
+            },
+            "category": {
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "salary_min": 75042.3,
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "New York",
+                    "New York City"
+                ],
+                "display_name": "New York City, New York"
+            },
+            "salary_is_predicted": "1",
+            "title": "Java Developer",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTYyMDUzMzkyMSIsInMiOiJRUFM4TG5NRzhSRzBBLTU1S3VBZWt3In0.HqnEbqtd-fU2LeRJ-W0_JcelIVT0oKDIBbeeIL3CuQo",
+            "description": "Job Description Job Description Job Title: Java Developer Location: New York, NY (Hybrid) Job Type: Full Time Work Authorization: Visa Independent only Job Summary: We are looking for a Java Developer to with 2–3 years of experience build, maintain, and improve our software applications. You will write clean and efficient code, fix bugs, and collaborate with our team to develop high-quality solutions. Requirements: 2-3 years of Java and object-oriented programming Experience with frameworks suc…",
+            "salary_max": 75042.3,
+            "created": "2026-02-08T10:55:00Z"
+        },
+        {
+            "title": "Engineer - Java",
+            "salary_is_predicted": "1",
+            "longitude": -112.07,
+            "salary_min": 68421.99,
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "Arizona",
+                    "Maricopa County",
+                    "Phoenix"
+                ],
+                "display_name": "Phoenix, Maricopa County"
+            },
+            "category": {
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "salary_max": 68421.99,
+            "created": "2026-02-08T23:41:14Z",
+            "description": "Job Description Job Description Overview CTG is seeking to fill an Engineer – Java position for our client. Location: Phoenix, AZ Duration: 12 months Duties: Design, develop, and support enterprise applications using Java/JEE Build and maintain APIs and reactive services using Vert.X Apply TDD, functional programming, and modern Java frameworks Support CI/CD pipelines and DevOps practices Collaborate in Agile/Scrum teams Skills: Java / Java JEE Vert.X, RESTful APIs Python Cucumber, automated te…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjIxMTQ5NzAwIn0.DazQvGusAvrzXyi_QVkLs-YtyOY1rEyhSk8NHV37Nt4",
+            "latitude": 33.45,
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "company": {
+                "display_name": "Computer Task Group, Inc",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "redirect_url": "https://www.adzuna.com/land/ad/5621149700?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=75796C98973781880E49CD36A3D711D0309A3799",
+            "id": "5621149700"
+        },
+        {
+            "category": {
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "location": {
+                "display_name": "West Virginia, US",
+                "area": [
+                    "US",
+                    "West Virginia"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "salary_min": 78573.26,
+            "longitude": -80.682155,
+            "salary_is_predicted": "1",
+            "title": "Java Developer",
+            "description": "Job Description Job Description Role : Java Developer Location : 100 percent remote Duration : 06 Months Plus Visa : Any End Client : Confidential till resume selection Rate : $55-C2C (Till Remote) Skills & Experience: 1. Java Spring Boot 2. Micro Services 3. FX/Wall Street 4. Foreign exchange experience needed Please Note: o Candidate with valid LinkedIn ID & Genuine references will have a strong point to get an interview o Please share your resume if above requirement match with you o Mention…",
+            "latitude": 38.771041,
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjA3MTMwODMzIn0._wX5gPWL-3JchGQTik4zVjaxf-NI7-TKJvMFzAaP-08",
+            "salary_max": 78573.26,
+            "created": "2026-01-30T23:47:14Z",
+            "id": "5607130833",
+            "redirect_url": "https://www.adzuna.com/land/ad/5607130833?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=747A3B3C91F79B251542814D80057AF861355632",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Resource Informatics Group Inc"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job"
+        },
+        {
+            "redirect_url": "https://www.adzuna.com/land/ad/5615156338?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=F407C07891BA71FF5CD34DDD779CEBE47C6CBFAE",
+            "id": "5615156338",
+            "company": {
+                "display_name": "Zone IT Solutions",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "latitude": 38.912068,
+            "description": "Job Description Job Description Join Zone IT Solutions as a Java Developer, where you'll be integral to developing innovative software solutions that drive efficiency and performance. You will work closely with cross-functional teams, utilizing your expertise to design and implement robust applications. Requirements Strong experience in Java programming and related frameworks. Solid understanding of Microservices Architecture. Proficient in Spring Boot and Spring MVC. Experience with cloud tech…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjE1MTU2MzM4In0.AAkgVTghuQZ7YOg-kuVHkmEYiY31HrmSihW2bkcNzcc",
+            "salary_max": 121850.75,
+            "created": "2026-02-04T23:07:40Z",
+            "category": {
+                "tag": "it-jobs",
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category"
+            },
+            "salary_min": 121850.75,
+            "location": {
+                "area": [
+                    "US",
+                    "Washington, D.C.",
+                    "Washington"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Washington, Washington, D.C."
+            },
+            "salary_is_predicted": "1",
+            "longitude": -77.019023,
+            "title": "Java Developer"
+        },
+        {
+            "latitude": 33.060381,
+            "description": "Job Description Job Description We have an immediate interview opportunity for experienced professionals in: Java AWS Spring Boot Microservices Date: March 14, 2025 (Today) Time: 2:00 PM EST (Face-to-Face Interview) Location: 575 Washington Blvd, Jersey City, NJ 07310 Work Location: Selected candidate can work from Texas (TX) If you or someone you know is available and interested, please contact me directly ASAP!",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTYyMjE5ODk2OCIsInMiOiJRUFM4TG5NRzhSRzBBLTU1S3VBZWt3In0.enEhHAQVjvp0LNe7NEumoLXoqkS71Xa2aRXhOOBVMq0",
+            "created": "2026-02-09T23:52:20Z",
+            "salary_max": 65614.8,
+            "category": {
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "salary_min": 65614.8,
+            "location": {
+                "area": [
+                    "US",
+                    "Texas",
+                    "Collin County",
+                    "Plano"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Plano, Collin County"
+            },
+            "salary_is_predicted": "1",
+            "longitude": -96.733343,
+            "title": "Java FSD",
+            "redirect_url": "https://www.adzuna.com/land/ad/5622198968?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=3010ED0DD12BAAE3F3578D70DF6C07DB368DC041",
+            "id": "5622198968",
+            "company": {
+                "display_name": "Tekcog INC",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job"
+        },
+        {
+            "id": "5594019737",
+            "redirect_url": "https://www.adzuna.com/land/ad/5594019737?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=CEE680D95E8C19FF9A5D3AA68453FDB2178EFD6F",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Techzon Inc"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "salary_is_predicted": "1",
+            "longitude": -77.45,
+            "title": "Junior Java Developer",
+            "category": {
+                "tag": "it-jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs"
+            },
+            "location": {
+                "display_name": "Richmond, Richmond County",
+                "area": [
+                    "US",
+                    "Virginia",
+                    "Richmond County",
+                    "Richmond"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "salary_min": 53741.62,
+            "latitude": 37.56,
+            "description": "Job Description Job Description As a Junior Java Developer, you will contribute to the Development and Maintenance of client's core business applications. This position assists in documenting the technical scope and design for new development and enhancements; designs and develops code; and ensures quality and integrity of software. Responsibilities Contribute to new design and development tasks on assigned projects Create technical solutions based on end user requirements Contribute to and uti…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU5NDAxOTczNyIsInMiOiJRUFM4TG5NRzhSRzBBLTU1S3VBZWt3In0.dqzn--DhWmvzGFI0iQIxEdabdmUy1b2z2fLqYn4vd9k",
+            "created": "2026-01-21T10:47:00Z",
+            "salary_max": 53741.62
+        },
+        {
+            "redirect_url": "https://www.adzuna.com/land/ad/5596798880?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=CFF9F457F5FB6F234B2C1EDAE2F89CCAF17FA095",
+            "id": "5596798880",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Magnus Technology Solutions"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "salary_is_predicted": "1",
+            "longitude": -96.767002,
+            "title": "Junior Java Developer",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "salary_min": 65423.6,
+            "location": {
+                "display_name": "Dallas, Texas",
+                "area": [
+                    "US",
+                    "Texas",
+                    "Dallas"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "description": "Job Description Job Description Job Title:- Java Developer Hybrid position Experience:- 2-5 years Visa:- H4EAD,GC,GC EAD, USC Required Skills: Java: 2 5 years of hands-on experience in Java development. Strong understanding of object-oriented programming principles. Familiarity with frameworks such as Spring or Hibernate. Nice-to-Have Skills: SQL: At least 1 year of experience with relational databases (e.g., MySQL, PostgreSQL). NoSQL: At least 1 year of experience with NoSQL databases (e.g., M…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NTk2Nzk4ODgwIn0.IOQMVrlgKByU0VyrjNa3ljU6Yup6dD1wzCuNik2uTKM",
+            "latitude": 32.798895,
+            "created": "2026-01-22T22:49:01Z",
+            "salary_max": 65423.6
+        },
+        {
+            "title": "Java Enterprise Developer",
+            "salary_is_predicted": "1",
+            "longitude": -77.019023,
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "Washington, D.C.",
+                    "Washington"
+                ],
+                "display_name": "Washington, Washington, D.C."
+            },
+            "salary_min": 112294.22,
+            "category": {
+                "tag": "it-jobs",
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category"
+            },
+            "salary_max": 112294.22,
+            "created": "2026-02-02T22:33:32Z",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjExMjY1OTY4In0.Yn6vWMrNIlMqFCH218Ez-JRi0YWPOR_qGd9DvkgyLP0",
+            "description": "Job Description Job Description Company Overview: At Innovative Object Solutions, we’re building an information technology company that focuses on software engineering. Our founder and President began as a software engineer and has built the company around software engineering principles. Our focus is developing large cloud based enterprise solutions in an Agile development environment, our primary technology stack is Java/NodeJS with React/Angular frontend delivered on AWS. As an Innovative Ob…",
+            "latitude": 38.912068,
+            "company": {
+                "display_name": "Innovative Object Solutions Inc",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "id": "5611265968",
+            "redirect_url": "https://www.adzuna.com/land/ad/5611265968?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=F7C55A51D4F34A27076BA092D16E1EB854FFFD3B"
+        },
+        {
+            "company": {
+                "display_name": "Astyra Corporation",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "id": "5617433568",
+            "redirect_url": "https://www.adzuna.com/land/ad/5617433568?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=D98A2D6CA9D187CA4D1713484F4495947A10F6E6",
+            "title": "Junior Java Developer",
+            "longitude": -78.631362,
+            "salary_is_predicted": "1",
+            "salary_min": 60558.66,
+            "location": {
+                "display_name": "Raleigh, Wake County",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "North Carolina",
+                    "Wake County",
+                    "Raleigh"
+                ]
+            },
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "created": "2026-02-06T11:05:46Z",
+            "salary_max": 60558.66,
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjE3NDMzNTY4In0.IEC_2pVW78raCjiId0m6c_BiaWnkvJ1pPofl1BGvSOM",
+            "description": "Job Description Job Description Junior Java Developer *Local to Raleigh, NC only please *This is a hybrid position *We are not considering Corp-to-Corp (C2C) arrangements for this position Description: The client seeks a contractor resource to assist with the development and implementation of NC Families Accessing Services through Technology NC FAST as a Junior Java Developer. This resource contributes to the full lifecycle of Java-based applications in a collaborative environment. This positio…",
+            "latitude": 35.77443
+        },
+        {
+            "created": "2026-02-05T23:15:18Z",
+            "salary_max": 133190.12,
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUVBTOExuTUc4UkcwQS01NUt1QWVrdyIsImkiOiI1NjE2Nzc1MDIyIn0.rjEHUsk8bNuxsJfn6pqGzuuaOyVejV58fEkudJ3BDR4",
+            "latitude": 39.296337,
+            "description": "Job Description Job Description Government agency is seeking a Senior Java Developer for a one year plus contract. This position is onsite in Baltimore MD with an approximate start date of 3/30/26. Title: Senior Java Developer Location: US-MD-Baltimore- ONSITE Background Requirements: Successful completion of a Fingerprint background investigation. Citizenship Status Required: H 1B Knowledge of the Affordable Care Act (ACA) eligibility rules for Medicaid and Qualified Health Plans and Experienc…",
+            "title": "Senior Java Developer",
+            "salary_is_predicted": "1",
+            "longitude": -76.621054,
+            "location": {
+                "display_name": "Baltimore, Baltimore County",
+                "area": [
+                    "US",
+                    "Maryland",
+                    "Baltimore County",
+                    "Baltimore"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "salary_min": 133190.12,
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "company": {
+                "display_name": "Transcend Business Solutions",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "redirect_url": "https://www.adzuna.com/land/ad/5616775022?se=QPS8LnMG8RG0A-55KuAekw&utm_medium=api&utm_source=ce0d2c23&v=B1F745B4C9FADF24E3A1B978F32BD4CE46978A7E",
+            "id": "5616775022"
+        }
+    ],
+    "__CLASS__": "Adzuna::API::Response::JobSearchResults"
+}
+
