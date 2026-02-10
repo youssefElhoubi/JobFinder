@@ -1,5 +1,5 @@
 export interface JobsState {
-    jobs: Jobs | null;
+    jobs: Jobs[] | null;
     loading: boolean;
     error: string | null;
 }
