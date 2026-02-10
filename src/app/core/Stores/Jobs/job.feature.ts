@@ -28,3 +28,5 @@ export const JobFeature= createFeature({
         }))
     )
 })
+
+export const {name,reducer,selectError,selectJobState,selectJobs,selectLoading} = JobFeature
