@@ -1,11 +1,28 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, isDevMode } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
+import { provideStore } from '@ngrx/store';
+import { provideEffects } from '@ngrx/effects';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { JobEffect } from './core/Stores/Jobs/job.effect';
+import { JobFeature } from './core/Stores/Jobs/job.feature';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { jobInterceptor } from './core/interceptors/jobs/job-interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(
+      withInterceptors([
+        jobInterceptor
+      ])
+    ),
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
-  ]
+    provideRouter(routes),
+    provideStore({
+      [JobFeature.name]: JobFeature.reducer
+    }),
+    provideEffects({JobEffect}),
+    provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
+]
 };
