@@ -3,7 +3,7 @@ import { JobsState } from "./jobs.model";
 import { JobActions } from "./jobs.actions";
 
 const initialState: JobsState = {
-    jobs: [],
+    jobs: null,
     loading: false,
     error: ""
 }

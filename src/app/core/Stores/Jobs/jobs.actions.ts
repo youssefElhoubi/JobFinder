@@ -5,8 +5,8 @@ import { Jobs } from "./jobs.model";
 export const JobActions = createActionGroup({
     source: "jobs",
     events: {
-        "init Loading": emptyProps(),
-        "Loading Success": props<{ jobs: Jobs[] }>(),
+        "init Loading": props<{ country: string, page: number, search: string | null, perpage: number }>(),
+        "Loading Success": props<{ jobs: Jobs }>(),
         "Loading Failure": props<{ error: string }>(),
     }
 })
