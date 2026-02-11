@@ -1,53 +1,83 @@
 <section class="bg-secondary text-white py-20 px-6">
     <div class="container mx-auto text-center max-w-5xl">
-        
+
         <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Your Dream Career Starts Here</h1>
         <p class="text-lg text-gray-300 mb-10">Connecting top talent with the world's most innovative companies.</p>
 
-        <div class="bg-white p-2 rounded-xl shadow-lg flex flex-col lg:flex-row gap-0 lg:gap-2 text-left">
-            
-            <div class="flex-1 relative flex items-center border-b lg:border-b-0 border-gray-100 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-400 ml-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-                <input type="text" placeholder="Job title or keywords" 
-                    class="w-full p-2 text-gray-800 placeholder-gray-500 focus:outline-none bg-transparent">
+        <form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+
+            <div class="bg-white p-2 rounded-xl shadow-lg flex flex-col lg:flex-row gap-0 lg:gap-2 text-left">
+
+                <div class="flex-1 relative flex items-center border-b lg:border-b-0 border-gray-100 p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 ml-2 transition-colors"
+                        [class.text-red-500]="keyword.invalid && keyword.touched"
+                        [class.text-gray-400]="!keyword.invalid || !keyword.touched">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+
+                    <input type="text" name="keyword" [(ngModel)]="searchInput" required minlength="2"
+                        #keyword="ngModel" placeholder="Job title or keywords"
+                        class="w-full p-2 text-gray-800 bg-transparent focus:outline-none placeholder-gray-500 transition-all rounded"
+                        [class.placeholder-red-400]="keyword.invalid && keyword.touched"
+                        [class.ring-1]="keyword.invalid && keyword.touched"
+                        [class.ring-red-500]="keyword.invalid && keyword.touched">
+                </div>
+
+                <div class="hidden lg:block w-px bg-gray-200 my-2"></div>
+
+                <div class="lg:w-1/4 relative flex items-center border-b lg:border-b-0 border-gray-100 p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 ml-2 transition-colors"
+                        [class.text-red-500]="region.invalid && region.touched"
+                        [class.text-gray-400]="!region.invalid || !region.touched">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+
+                    <select name="region" [(ngModel)]="country" required #region="ngModel"
+                        class="w-full p-2 text-gray-800 bg-transparent focus:outline-none cursor-pointer rounded transition-all"
+                        [class.ring-1]="region.invalid && region.touched"
+                        [class.ring-red-500]="region.invalid && region.touched"
+                        [class.text-red-500]="region.invalid && region.touched">
+                        <option value="" disabled selected>Select Region</option>
+                        @for (item of COUNTRIES; track $index) {
+                        <option [value]="item.code">{{item.name}}</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="hidden lg:block w-px bg-gray-200 my-2"></div>
+
+                <div class="lg:w-40 relative flex items-center p-2 mb-2 lg:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 text-gray-400 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                    </svg>
+
+                    <select name="perPage" [(ngModel)]="perPage"
+                        class="w-full p-2 text-gray-800 bg-transparent focus:outline-none cursor-pointer">
+                        <option value="10">10 / Page</option>
+                        <option value="20">20 / Page</option>
+                        <option value="50">50 / Page</option>
+                    </select>
+                </div>
+
+                <button type="submit" [disabled]="searchForm.invalid || isloading"
+                    class="bg-primary hover:bg-accent disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-bold transition shadow-md whitespace-nowrap">
+                    Search Jobs
+                </button>
             </div>
-
-            <div class="hidden lg:block w-px bg-gray-200 my-2"></div>
-
-            <div class="lg:w-1/4 relative flex items-center border-b lg:border-b-0 border-gray-100 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-400 ml-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-                <select class="w-full p-2 text-gray-800 bg-transparent focus:outline-none cursor-pointer">
-                    <option value="" disabled selected>Select Region</option>
-                    <option value="us">United States</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="eu">Europe</option>
-                    <option value="remote">Remote</option>
-                </select>
+            @if (searchForm.submitted && searchForm.invalid) {
+            <div class="text-red-300 mt-2 text-sm font-semibold">
+                * Please enter a job title and select a region.
             </div>
+            }
 
-            <div class="hidden lg:block w-px bg-gray-200 my-2"></div>
-
-            <div class="lg:w-40 relative flex items-center p-2 mb-2 lg:mb-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-400 ml-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-                <select class="w-full p-2 text-gray-800 bg-transparent focus:outline-none cursor-pointer">
-                    <option value="10">10 / Page</option>
-                    <option value="20">20 / Page</option>
-                    <option value="50">50 / Page</option>
-                </select>
-            </div>
-
-            <button class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-lg font-bold transition shadow-md whitespace-nowrap">
-                Search Jobs
-            </button>
-        </div>
-
+        </form>
     </div>
 
     <app-joblist></app-joblist>
