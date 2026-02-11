@@ -12,7 +12,7 @@ export class JobService {
 
   fetchJobs(country: string = "us", page: number = 1, search: string | null, perpage: number = 5): Observable<Jobs> {
     const searchTerm = search ? search : '';
-    const url = `${environment.jobApi}/${country}/${searchTerm}/${page}`;
+    const url = `${environment.jobApi}/${country}/search/${page}`;
     return this.http.get<Jobs>(url, {
       params: {
         results_per_page: perpage.toString(),

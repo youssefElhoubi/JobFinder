@@ -7,9 +7,16 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { JobEffect } from './core/Stores/Jobs/job.effect';
 import { JobFeature } from './core/Stores/Jobs/job.feature';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { jobInterceptor } from './core/interceptors/jobs/job-interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(
+      withInterceptors([
+        jobInterceptor
+      ])
+    ),
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideStore({

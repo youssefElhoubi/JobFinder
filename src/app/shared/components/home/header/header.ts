@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { selectJobs } from '../../../../core/Stores/Jobs/job.feature';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-
+  private store = inject(Store)
 }
