@@ -1,1 +1,33 @@
-<p>joblist works!</p>
+<section class=" bg-secondary py-16 px-6">
+    <div class="container mx-auto max-w-6xl">
+
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900">Latest Opportunities</h2>
+                <p class="text-gray-500 mt-2">Showing 1-6 of 10 available positions</p>
+            </div>
+            <select class="border-gray-300 rounded-md shadow-sm p-2 text-gray-700 bg-white border">
+                <option>Most Recent</option>
+                <option>Highest Paid</option>
+            </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            <app-job-cardes></app-job-cardes>
+            
+        </div>
+
+
+
+    </div>
+    <app-page-nav></app-page-nav>
+</section>
