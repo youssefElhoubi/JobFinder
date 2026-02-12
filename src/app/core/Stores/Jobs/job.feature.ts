@@ -13,7 +13,7 @@ export const JobFeature= createFeature({
     reducer:createReducer(
         initialState,
         on(JobActions.initLoading,(state)=>({
-            ...state,
+            jobs :null,
             loading:true,
             error:""
         })),

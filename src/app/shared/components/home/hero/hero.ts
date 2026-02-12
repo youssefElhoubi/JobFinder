@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { selectError, selectJobs, selectLoading } from '../../../../core/Stores/Jobs/job.feature';
 import { JobActions } from '../../../../core/Stores/Jobs/jobs.actions';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { urlActions } from '../../../../core/Stores/url/url.actions';
 
 
 
@@ -50,10 +51,9 @@ export class Hero {
       return
     }
     this.store.dispatch(
-      JobActions.initLoading({
-        country: this.country, page: 1, search: this.searchInput, perpage: this.perPage
+      urlActions.makeURL({
+        country: this.country, page: 1, search: this.searchInput, perPage: this.perPage
       })
     )
-
   }
 }
