@@ -10,6 +10,7 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { jobInterceptor } from './core/interceptors/jobs/job-interceptor';
 import { urlEffect } from './core/Stores/url/url.effect';
 import { urlFeature } from './core/Stores/url/url.feature';
+import { pagechangeEffect } from './core/Stores/url/pagechange.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,7 +25,7 @@ export const appConfig: ApplicationConfig = {
       [JobFeature.name]: JobFeature.reducer,
       [urlFeature.name]: urlFeature.reducer
     }),
-    provideEffects({urlEffect}),
+    provideEffects({urlEffect,pagechangeEffect}),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 };
