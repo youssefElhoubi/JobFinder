@@ -13,10 +13,10 @@ import { Result } from '../../../../core/Stores/Jobs/jobs.model';
 })
 export class Joblist {
   private store: Store = inject(Store);
-  jobs: Result[] | null = null
+  jobs: Result[] = [];
   Jobs$ = this.store.select(selectJobs);
   loading$ = this.store.select(selectLoading);
   ngOnInit() {
-    this.Jobs$.subscribe(data => this.jobs = data?.results ?? null)
+    this.Jobs$.subscribe(data => this.jobs = data?.results ?? [] )
   }
 }

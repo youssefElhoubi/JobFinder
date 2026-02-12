@@ -13,7 +13,9 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <app-job-cardes></app-job-cardes>
+            @for (item of jobs; track $index) {
+            <app-job-cardes [job]="item"></app-job-cardes>
+            }
         </div>
 
 
