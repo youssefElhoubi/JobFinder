@@ -19,6 +19,10 @@ export const urlFeature = createFeature({
             perPage,
             search,
             country
+        })),
+        on(urlActions.changePage,(state,{perPage})=>({
+            ...state,
+            perPage
         }))
     )
 })
