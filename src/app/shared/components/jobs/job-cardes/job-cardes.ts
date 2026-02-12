@@ -8,6 +8,6 @@ import { Result } from '../../../../core/Stores/Jobs/jobs.model';
   styleUrl: './job-cardes.css',
 })
 export class JobCardes {
-  @Input() jobs: Result | null = null
+  @Input() jobs!: Result 
 
 }
