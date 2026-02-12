@@ -66,7 +66,7 @@
                     </select>
                 </div>
 
-                <button type="submit" [disabled]="searchForm.invalid || isloading"
+                <button type="submit" [disabled]="(searchForm.invalid || (Loading$ | async))"
                     class="bg-primary hover:bg-accent disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-bold transition shadow-md whitespace-nowrap">
                     Search Jobs
                 </button>
@@ -79,6 +79,11 @@
 
         </form>
     </div>
-
+    @if ((Jobs$|async) && !(Loading$|async)) {
     <app-joblist></app-joblist>
+    }
+    @if (Loading$|async) {
+    <mat-spinner ></mat-spinner>
+    }
+
 </section>

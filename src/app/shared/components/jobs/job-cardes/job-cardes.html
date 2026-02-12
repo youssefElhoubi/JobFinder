@@ -1,19 +1,46 @@
-<div
-    class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100">
+<article
+    class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100 h-full">
+
     <div class="p-6 flex-1">
+
         <div class="flex justify-between items-start mb-4">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold">G
+            <div
+                class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary text-xl font-bold">
+                {{job.company.display_name.at(0)}}
             </div>
-            <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full">Full Time</span>
+
+            <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
+                {{job.category.label}}
+            </span>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-1">Senior UX Designer</h3>
-        <p class="text-gray-500 text-sm mb-4">Google • Remote</p>
+
+        <h3 class="text-xl font-bold text-gray-900 mb-1 line-clamp-1" title="Senior Software Engineer">
+            {{job.title}}
+        </h3>
+
+        <p class="text-gray-500 text-sm mb-4">
+            {{job.company.display_name}}•{{job.location.display_name}}
+        </p>
+
         <p class="text-gray-600 text-sm line-clamp-3">
-            We are looking for an experienced designer to help lead our creative team...
+            {{job.description}}
         </p>
     </div>
+
     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-between items-center">
-        <span class="text-gray-900 font-bold">$120k/yr</span>
-        <button class="text-primary font-semibold hover:underline">Apply Now</button>
+
+        <span class="text-gray-900 font-bold text-sm">
+            {{job.salary_min}} - {{job.salary_max}}
+        </span>
+
+        <a [href]="job.redirect_url" target="_blank"
+            class="text-primary font-semibold hover:text-accent hover:underline flex items-center gap-1 transition">
+            Apply
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+        </a>
     </div>
-</div>
+
+</article>

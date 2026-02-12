@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Result } from '../../../../core/Stores/Jobs/jobs.model';
 
 @Component({
   selector: 'app-job-cardes',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './job-cardes.css',
 })
 export class JobCardes {
+  @Input() job!: Result 
 
 }

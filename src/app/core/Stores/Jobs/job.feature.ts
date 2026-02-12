@@ -24,6 +24,7 @@ export const JobFeature= createFeature({
         })),
         on(JobActions.loadingFailure,(state,{error})=>({
             ...state,
+            loading:false,
             error
         }))
     )

@@ -1,0 +1,4 @@
+::ng-deep mat-spinner circle {
+    margin: 0 auto;
+  stroke: #22c55e; /* green */
+}
