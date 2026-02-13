@@ -5,10 +5,12 @@ import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { JobEffect } from './core/Stores/Jobs/job.effect';
 import { JobFeature } from './core/Stores/Jobs/job.feature';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { jobInterceptor } from './core/interceptors/jobs/job-interceptor';
+import { urlEffect } from './core/Stores/url/url.effect';
+import { urlFeature } from './core/Stores/url/url.feature';
+import { pagechangeEffect } from './core/Stores/url/pagechange.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,9 +22,10 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideStore({
-      [JobFeature.name]: JobFeature.reducer
+      [JobFeature.name]: JobFeature.reducer,
+      [urlFeature.name]: urlFeature.reducer
     }),
-    provideEffects({JobEffect}),
+    provideEffects({urlEffect,pagechangeEffect}),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 };
