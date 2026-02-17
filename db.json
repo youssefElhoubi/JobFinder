@@ -1,1 +1,12 @@
-{}
+{
+    "uers": [
+        {
+            "id": 1,
+            "userId": 2,
+            "offerId": 101,
+            "title": "Développeur Angular",
+            "company": "Entreprise A",
+            "location": "Casablanca"
+        }
+    ]
+}
