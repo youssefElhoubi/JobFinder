@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class Login {
+export class Authservice {
   private http = inject(HttpClient);
-  url = environment.api;
-  login(email:string,password:string):Observable<userType>{
-    return this.http.get<userType>(this.url,{
+  private url = environment.api+"user";
+  login(email:string,password:string):Observable<userType[]>{
+    return this.http.get<userType[]>(this.url,{
       params:{
         email,
         password
