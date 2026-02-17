@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmite()">
     <div class="mb-12">
         <h1 class="text-slate-900 text-3xl font-bold">Sign in</h1>
         <p class="text-[15px] mt-6 text-slate-600">Don't have an account <a href="javascript:void(0);"
@@ -9,7 +9,7 @@
     <div>
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Email</label>
         <div class="relative flex items-center">
-            <input name="email" type="text" required
+            <input formGroupName="email" type="text" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Enter email" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-4.5 h-4.5 absolute right-2"
@@ -29,11 +29,21 @@
                 </g>
             </svg>
         </div>
+        @if (email?.invalid && (email?.dirty || email?.touched)) {
+        <div class="text-[red] text-[0.8em] mt-1.25">
+            @if (email?.errors?.['required']) {
+                <b >Email is required.</b>
+            }
+            @if (email?.errors?.['email']) {
+                <b >Please enter a valid email.</b>
+            }
+        </div>
+        }
     </div>
     <div class="mt-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Password</label>
         <div class="relative flex items-center">
-            <input name="password" type="password" required
+            <input formGroupName="password" type="password" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Enter password" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
@@ -43,10 +53,20 @@
                     data-original="#000000"></path>
             </svg>
         </div>
+        @if (password?.invalid && (password?.dirty || password?.touched)) {
+        <div class="text-[red] text-[0.8em] mt-1.25">
+            @if (password?.errors?.['required']) {
+                <b >password is required.</b>
+            }
+            @if (password?.errors?.['minlength']) {
+                <b >Please enter a valid password.</b>
+            }
+        </div>
+        }
     </div>
 
     <div class="mt-12">
-        <button type="button"
+        <button type="submit"
             class="w-full shadow-xl py-2.5 px-4 text-sm font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer">
             Sign in
         </button>
