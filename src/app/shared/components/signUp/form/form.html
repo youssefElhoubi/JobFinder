@@ -1,4 +1,4 @@
-<form action="#">
+<form [formGroup]="signUpForm" action="#">
     <div class="mb-12">
         <h1 class="text-slate-900 text-3xl font-bold">Create an account</h1>
         <p class="text-[15px] mt-6 text-slate-600">Already have an account? <a href="javascript:void(0);"
@@ -9,7 +9,7 @@
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Full Name</label>
         <div class="relative flex items-center">
-            <input name="name" type="text" required
+            <input formControlName="name" type="text" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Enter full name" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-4.5 h-4.5 absolute right-2"
@@ -25,7 +25,7 @@
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Email</label>
         <div class="relative flex items-center">
-            <input name="email" type="email" required
+            <input formControlName="email" type="email" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Enter email" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-4.5 h-4.5 absolute right-2"
@@ -50,7 +50,7 @@
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Password</label>
         <div class="relative flex items-center">
-            <input name="password" type="password" required
+            <input formControlName="password" type="password" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Enter password" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
@@ -65,7 +65,7 @@
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Confirm Password</label>
         <div class="relative flex items-center">
-            <input name="confirm-password" type="password" required
+            <input formControlName="confirmpassword" type="password" required
                 class="w-full text-slate-900 text-sm border-b border-slate-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none"
                 placeholder="Confirm password" />
             <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
@@ -75,15 +75,6 @@
                     data-original="#000000"></path>
             </svg>
         </div>
-    </div>
-
-    <div class="flex items-center mb-8">
-        <input id="terms" name="terms" type="checkbox"
-            class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
-        <label for="terms" class="ml-3 block text-sm text-slate-800">
-            I accept the <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">Terms
-                and Conditions</a>
-        </label>
     </div>
 
     <div class="mt-8">
