@@ -1,4 +1,4 @@
-<form [formGroup]="signUpForm" action="#">
+<form [formGroup]="signUpForm"  (ngSubmit)="onsubmite()" >
     <div class="mb-12">
         <h1 class="text-slate-900 text-3xl font-bold">Create an account</h1>
         <p class="text-[15px] mt-6 text-slate-600">Already have an account? <a href="javascript:void(0);"
@@ -21,7 +21,7 @@
             </svg>
         </div>
     </div>
-    @if (name?.invalid && (name?.dirty && name?.touched)) {
+    @if (name?.invalid && (name?.dirty || name?.touched)) {
     <div class="text-[red] text-[1em] mt-1.25">
         @if (name?.errors?.['required']) {
         <b>name is required.</b>
@@ -29,7 +29,7 @@
         @if (name?.errors?.['minlength']) {
         <b>Please enter a valid name longer than 3 charectecs .</b>
         }
-        @if (name?.errors?.["maxlenght"]) {
+        @if (name?.errors?.["maxlength"]) {
         <b>Please enter a valid name less than 10 charectecs .</b>
         }
     </div>
@@ -119,6 +119,9 @@
         }
     </div>
     }
+    <div class="text-[red] text-[1em] mt-1.25">
+        <b>{{confirmPasswordError()}}</b>
+    </div>
 
     <div class="mt-8">
         <button type="submit"

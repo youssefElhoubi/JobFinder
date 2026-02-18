@@ -1,10 +1,16 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "elhoubiyoussef@gmail.com",
-            "password": "password123"
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "elhoubiyoussef@gmail.com",
+      "password": "password123"
+    },
+    {
+      "id": "177144755083998.92542894176084",
+      "name": "someone",
+      "email": "fojufybus@mailinator.com",
+      "password": "faghjkl;q"
+    }
+  ]
 }

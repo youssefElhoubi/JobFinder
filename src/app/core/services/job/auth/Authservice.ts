@@ -7,14 +7,26 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Authservice {
+
   private http = inject(HttpClient);
-  private url = environment.api+"user";
-  login(email:string,password:string):Observable<userType[]>{
-    return this.http.get<userType[]>(this.url,{
-      params:{
+  private url = environment.api + "user";
+
+  login(email: string, password: string): Observable<userType[]> {
+    return this.http.get<userType[]>(this.url, {
+      params: {
         email,
         password
       },
     })
-  }  
+  }
+  signUp(name:string,email: string, password: string):Observable<userType>{
+    const user = {
+      id: Date.now().toString() + (Math.random()*100).toString(),
+      name,
+      email,
+      password
+    }
+    return this.http.post<userType>(this.url,user);
+  }
+
 }
