@@ -11,7 +11,7 @@ export class Form {
   private fb = inject(FormBuilder)
 
   signUpForm = this.fb.group({
-    name:["",[Validators.required,Validators.min(3),Validators.max(6)]],
+    name:["",[Validators.required,Validators.min(3),Validators.max(10)]],
     email:["",[Validators.required,Validators.email,]],
     password:["",Validators.required,Validators.min(6)],
     confirmpassword:["",Validators.required,Validators.min(6)],
