@@ -30,7 +30,7 @@
         <b>Please enter a valid name longer than 3 charectecs .</b>
         }
         @if (name?.errors?.["maxlenght"]) {
-            <b>Please enter a valid name less than 10 charectecs .</b>
+        <b>Please enter a valid name less than 10 charectecs .</b>
         }
     </div>
     }
@@ -60,15 +60,15 @@
         </div>
     </div>
     @if (email?.invalid && (email?.dirty || email?.touched)) {
-        <div class="text-[red] text-[1em] mt-1.25">
-            @if (email?.errors?.['required']) {
-            <b>Email is required.</b>
-            }
-            @if (email?.errors?.['email']) {
-            <b>Please enter a valid email.</b>
-            }
-        </div>
+    <div class="text-[red] text-[1em] mt-1.25">
+        @if (email?.errors?.['required']) {
+        <b>Email is required.</b>
         }
+        @if (email?.errors?.['email']) {
+        <b>Please enter a valid email.</b>
+        }
+    </div>
+    }
 
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Password</label>
@@ -84,6 +84,16 @@
             </svg>
         </div>
     </div>
+     @if (password?.invalid && (password?.dirty || password?.touched)) {
+        <div class="text-[red] text-[1em] mt-1.25">
+            @if (password?.errors?.['required']) {
+            <b>password is required.</b>
+            }
+            @if (password?.errors?.['minlength']) {
+            <b>Please enter a valid password.</b>
+            }
+        </div>
+        }
 
     <div class="mb-8">
         <label class="text-slate-900 text-[13px] font-medium block mb-2">Confirm Password</label>
@@ -99,6 +109,16 @@
             </svg>
         </div>
     </div>
+    @if (confirmpassword?.invalid && (confirmpassword?.dirty || confirmpassword?.touched)) {
+    <div class="text-[red] text-[1em] mt-1.25">
+        @if (confirmpassword?.errors?.['required']) {
+        <b>password is required.</b>
+        }
+        @if (confirmpassword?.errors?.['minlength']) {
+        <b>Please enter a valid password.</b>
+        }
+    </div>
+    }
 
     <div class="mt-8">
         <button type="submit"
