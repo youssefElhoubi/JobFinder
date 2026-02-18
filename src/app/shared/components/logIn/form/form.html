@@ -1,7 +1,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmite()">
     <div class="mb-12">
         <h1 class="text-slate-900 text-3xl font-bold">Sign in</h1>
-        <p class="text-[15px] mt-6 text-slate-600">Don't have an account <a href="javascript:void(0);"
+        <p class="text-[15px] mt-6 text-slate-600">Don't have an account <a (click)="redirector.navigator('/signup')"
                 class="text-blue-600 font-medium hover:underline ml-1 whitespace-nowrap">Register here</a>
         </p>
     </div>

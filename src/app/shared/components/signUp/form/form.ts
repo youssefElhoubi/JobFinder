@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule } from '@angular/forms';
 import { Authservice } from '../../../../core/services/job/auth/Authservice';
+import { Redirect } from '../../../service/redirect';
 
 @Component({
   selector: 'app-form',
@@ -9,6 +10,7 @@ import { Authservice } from '../../../../core/services/job/auth/Authservice';
   styleUrl: './form.css',
 })
 export class Form {
+  redirector = inject(Redirect);
   confirmPasswordError = signal("");
   private fb = inject(FormBuilder);
   private authservice = inject(Authservice);

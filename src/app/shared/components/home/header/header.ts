@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { selectJobs } from '../../../../core/Stores/Jobs/job.feature';
+import { Router } from '@angular/router';
+import { Redirect } from '../../../service/redirect';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +9,6 @@ import { selectJobs } from '../../../../core/Stores/Jobs/job.feature';
   styleUrl: './header.css',
 })
 export class Header {
-  private store = inject(Store)
+  private router = inject(Router)
+  redirector = inject(Redirect);
 }

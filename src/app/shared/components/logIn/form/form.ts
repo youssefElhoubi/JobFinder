@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Authservice } from '../../../../core/services/job/auth/Authservice';
+import { Redirect } from '../../../service/redirect';
 
 @Component({
   selector: 'app-form',
@@ -10,6 +11,7 @@ import { Authservice } from '../../../../core/services/job/auth/Authservice';
   styleUrl: './form.css',
 })
 export class Form {
+  redirector = inject(Redirect);
   private fb = inject(FormBuilder)
   error: string = '';
   private authservice = inject(Authservice)
