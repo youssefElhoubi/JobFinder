@@ -1,6 +1,8 @@
-import { Routes } from '@angular/router';
+import { Routes, CanActivateChildFn } from '@angular/router';
 import { HomeLayout } from './layout/home-layout/home-layout';
 import { SignedLoayout } from './layout/signed-loayout/signed-loayout';
+import { authGuard } from './core/guards/active/auth-guard';
+import { authChiledGuard } from './core/guards/ActivateChild/auth-chiled-guard';
 
 export const routes: Routes = [
     {
@@ -17,7 +19,9 @@ export const routes: Routes = [
         children: [{
             path: '',
             loadComponent: () => import('./pages/home/home').then(m => m.Home)
-        }]
+        }],
+        canActivate:[authGuard],
+        canActivateChild:[authChiledGuard]
     },
     {
         path: "login",

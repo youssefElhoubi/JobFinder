@@ -35,7 +35,7 @@ export class Form {
             this.error = "wrong email or password"
           }
           localStorage.setItem("user", user[0].id.toString())
-          // redirect after this part
+          this.redirector.navigator("/home")
         },
         error: (err) => {
           console.log(err);
