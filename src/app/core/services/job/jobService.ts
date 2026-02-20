@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Jobs } from '../../Stores/Jobs/jobs.model';
 import { environment } from '../../../../environment/environment';
+import { savedJobs } from '../../../shared/models/savedJobOffers';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,7 @@ export class JobService {
       }
     });
   }
-  saveJob(offerId: string, title: string, company: string, location: string):Observable<any> {
-    return this.http.post(`${environment.api}saveJobs`,{offerId,title,company,location});
+  saveJob(offerId: string, title: string, company: string, location: string):Observable<savedJobs> {
+    return this.http.post<savedJobs>(`${environment.api}saveJobs`,{offerId,title,company,location});
   }
 }

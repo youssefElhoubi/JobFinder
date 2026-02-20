@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "email": "elhoubiyoussef@gmail.com",
       "password": "password123"
@@ -15,11 +15,20 @@
   ],
   "saveJobs": [
     {
-      "id": "c846",
-      "offerId": "5635640863",
+      "id": "c1da",
+      "offerId": "5635640858",
       "title": "Java-Entwickler:in",
       "company": "TAC Informationstechnologie GmbH",
-      "location": "Hartberg, Hartberg-Fürstenfeld"
+      "location": "Graz, Steiermark",
+      "userId": 1
+    },
+    {
+      "id": "b0f8",
+      "offerId": "5634567426",
+      "title": "Developer Programmer",
+      "company": "GR IT Solutions Pty Ltd",
+      "location": "Australian Capital Territory, Australia",
+      "userId": 1
     }
   ]
 }

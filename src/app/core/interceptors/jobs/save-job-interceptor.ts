@@ -9,7 +9,8 @@ export const saveJobInterceptor: HttpInterceptorFn = (req, next) => {
     redirector.navigator("/login");
     return next(req);
   }
-  if(req.url.startsWith("3000")){
+  if(req.url.includes("saveJobs")){
+    
     const newRequest = req.clone({
       body:{
         ...(req.body as object || {}),
