@@ -14,7 +14,7 @@ export const routes: Routes = [
         }],
     },
     {
-        path: "home",
+        path: "signed",
         component: SignedLoayout,
         children: [{
             path: '',
