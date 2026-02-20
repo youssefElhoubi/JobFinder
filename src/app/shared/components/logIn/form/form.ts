@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Authservice } from '../../../../core/services/job/auth/Authservice';
+import { Authservice } from '../../../../core/services/auth/Authservice';
 import { Redirect } from '../../../service/redirect';
 
 @Component({

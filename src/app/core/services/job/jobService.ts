@@ -20,4 +20,7 @@ export class JobService {
       }
     });
   }
+  saveJob(offerId: string, title: string, company: string, location: string):Observable<any> {
+    return this.http.post(environment.api,{offerId,title,company,location});
+  }
 }

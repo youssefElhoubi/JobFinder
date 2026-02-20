@@ -12,5 +12,8 @@ import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 export class JobCardes {
   @Input() job!: Result 
   bookmark = faRegularBookmark
+  saveJobPost(id:string){
+    console.log(id);
+  }
 
 }

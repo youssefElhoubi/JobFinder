@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule } from '@angular/forms';
-import { Authservice } from '../../../../core/services/job/auth/Authservice';
+import { Authservice } from '../../../../core/services/auth/Authservice';
 import { Redirect } from '../../../service/redirect';
 
 @Component({
