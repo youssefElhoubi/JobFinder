@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './nav.css',
 })
 export class Nav {
+  signOut(){
+    localStorage.clear();
+  }
 
 }

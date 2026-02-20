@@ -35,10 +35,7 @@ export class Form {
     return this.signUpForm.get("confirmpassword");
   }
   onsubmite() {
-    console.log("here");
-
     if (this.signUpForm.valid) {
-      console.log("here2");
       const { confirmpassword, email, name, password } = this.signUpForm.value;
       if (password !== confirmpassword) {
         this.confirmPasswordError.set("password does not match check your password")
@@ -46,13 +43,13 @@ export class Form {
       }
       this.authservice.signUp(name!,email!,password!).subscribe({
         next: (user) => {
-          console.log(user);
+          localStorage.setItem("user", user.id.toString())
+          this.redirector.navigator("/home")
         },
         error: (err) => {
           console.log(err);
         }
       })
-      // console.log(this.signUpForm.value);
     } else {
       this.signUpForm.markAllAsTouched()
     }
