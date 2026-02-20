@@ -7,6 +7,7 @@ export const saveJobInterceptor: HttpInterceptorFn = (req, next) => {
   const user = JSON.parse(localStorage.getItem("user")||"null")
   if (!user) {
     redirector.navigator("/login");
+    return next(req);
   }
   if(req.url.startsWith("3000")){
     const newRequest = req.clone({

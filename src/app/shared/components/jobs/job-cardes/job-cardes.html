@@ -35,7 +35,7 @@
 
         <div class=" w-1/3 flex items-center justify-between">
             <div class=" w-5 text-black">
-                <fa-icon [icon]="bookmark" (click)="saveJobPost(job.id)"></fa-icon>
+                <fa-icon [icon]="bookmark" (click)="saveJobPost(job.id,job.title,job.company.display_name,job.location.display_name)"></fa-icon>
             </div>
 
             <a [href]="job.redirect_url" target="_blank"

@@ -12,5 +12,14 @@
       "email": "fojufybus@mailinator.com",
       "password": "faghjkl;q"
     }
+  ],
+  "saveJobs": [
+    {
+      "id": "c846",
+      "offerId": "5635640863",
+      "title": "Java-Entwickler:in",
+      "company": "TAC Informationstechnologie GmbH",
+      "location": "Hartberg, Hartberg-Fürstenfeld"
+    }
   ]
 }

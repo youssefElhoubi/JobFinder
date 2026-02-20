@@ -6,7 +6,7 @@ import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-page-nav',
-  imports: [AsyncPipe],
+  // imports: [AsyncPipe],
   templateUrl: './page-nav.html',
   styleUrl: './page-nav.css',
 })
