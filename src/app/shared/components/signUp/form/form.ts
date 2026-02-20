@@ -35,10 +35,7 @@ export class Form {
     return this.signUpForm.get("confirmpassword");
   }
   onsubmite() {
-    console.log("here");
-
     if (this.signUpForm.valid) {
-      console.log("here2");
       const { confirmpassword, email, name, password } = this.signUpForm.value;
       if (password !== confirmpassword) {
         this.confirmPasswordError.set("password does not match check your password")
@@ -53,7 +50,6 @@ export class Form {
           console.log(err);
         }
       })
-      // console.log(this.signUpForm.value);
     } else {
       this.signUpForm.markAllAsTouched()
     }
