@@ -17,4 +17,11 @@ export class SavedJobs {
       }
     })
   }
+  getUsersavedJobs(userId:string){
+    return this.http.get<savedJobs[]>(`${environment.api}saveJobs`,{
+      params:{
+        userId
+      }
+    })
+  }
 }

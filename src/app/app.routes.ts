@@ -19,7 +19,12 @@ export const routes: Routes = [
         children: [{
             path: '',
             loadComponent: () => import('./pages/home/home').then(m => m.Home)
-        }],
+        },
+        {
+            path:"savedJobs",
+            loadComponent:()=> import("./pages/sign-up/sign-up").then(m=>m.SignUp)
+        }
+    ],
         canActivate:[authGuard],
         canActivateChild:[authChiledGuard]
     },
