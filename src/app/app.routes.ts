@@ -21,12 +21,12 @@ export const routes: Routes = [
             loadComponent: () => import('./pages/home/home').then(m => m.Home)
         },
         {
-            path:"savedJobs",
-            loadComponent:()=> import("./pages/sign-up/sign-up").then(m=>m.SignUp)
+            path: "savedJsobs",
+            loadComponent: () =>import("./pages/saved-jobs/saved-jobs").then(m => m.SavedJobs)
         }
-    ],
-        canActivate:[authGuard],
-        canActivateChild:[authChiledGuard]
+        ],
+        canActivate: [authGuard],
+        canActivateChild: [authChiledGuard]
     },
     {
         path: "login",
