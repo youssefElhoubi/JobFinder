@@ -29,6 +29,21 @@
       "company": "GR IT Solutions Pty Ltd",
       "location": "Australian Capital Territory, Australia",
       "userId": 1
+    },
+    {
+      "id": "e79a",
+      "offerId": "5639193648",
+      "title": "Senior Java Developer:in",
+      "company": "STRABAG BRVZ GMBH",
+      "location": "Villach, Kärnten",
+      "userId": 1
+    },
+    {
+      "id": "c712",
+      "offerId": "5639193648",
+      "title": "Senior Java Developer:in",
+      "company": "STRABAG BRVZ GMBH",
+      "location": "Villach, Kärnten"
     }
   ]
 }

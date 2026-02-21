@@ -12,6 +12,9 @@ import { urlEffect } from './core/Stores/url/url.effect';
 import { urlFeature } from './core/Stores/url/url.feature';
 import { pagechangeEffect } from './core/Stores/url/pagechange.effect';
 import { saveJobInterceptor } from './core/interceptors/jobs/save-job-interceptor';
+import { savedJobsEffect } from './core/Stores/savedJobs/savedJobs.effect';
+import { savedJobsFeature } from './core/Stores/savedJobs/savedJobs.feature';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,9 +28,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore({
       [JobFeature.name]: JobFeature.reducer,
-      [urlFeature.name]: urlFeature.reducer
+      [urlFeature.name]: urlFeature.reducer,
+      [savedJobsFeature.name]: savedJobsFeature.reducer
     }),
-    provideEffects({urlEffect,pagechangeEffect}),
+    provideEffects({urlEffect,pagechangeEffect,savedJobsEffect}),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 };

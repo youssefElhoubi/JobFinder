@@ -15,7 +15,7 @@ const initialState: jobstype = {
     count: 0
 }
 
-const savedJobsFeature = createFeature({
+export const savedJobsFeature = createFeature({
     name: "saved jobs feature",
     reducer: createReducer(
         initialState,
