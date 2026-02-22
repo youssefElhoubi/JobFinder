@@ -1,0 +1,9 @@
+<div class="flex  items-center justify-around h-64">
+    @for (item of (jobs$ | async); track item.offerId) {
+    <app-saved-jobs-card [savedJob]="item"></app-saved-jobs-card>
+    }
+    @empty {
+
+    <p class="text-center text-gray-500 mt-10">No saved jobs found.</p>
+    }
+</div>

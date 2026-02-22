@@ -30,7 +30,6 @@ export class Form {
       const { email, password } = this.loginForm.value
       this.authservice.login(email!, password!).subscribe({
         next: (user) => {
-          console.log(user);
           if (user.length == 0) {
             this.error = "wrong email or password"
           }
