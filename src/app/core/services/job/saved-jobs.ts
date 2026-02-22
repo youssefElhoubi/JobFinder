@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../../environment/environment';
-import { Observable } from 'rxjs';
+import { Observable, retry } from 'rxjs';
 import { savedJobs } from '../../../shared/models/savedJobOffers';
 
 @Injectable({
@@ -14,6 +14,20 @@ export class SavedJobs {
       params:{
         offerId,
         userId
+      }
+    })
+  }
+  getUsersavedJobs(userId:string){
+    return this.http.get<savedJobs[]>(`${environment.api}saveJobs`,{
+      params:{
+        userId
+      }
+    })
+  }
+  deleteSavedJob(id:string ){
+    return this.http.delete(`${environment.api}saveJobs`,{
+      params:{
+        id
       }
     })
   }

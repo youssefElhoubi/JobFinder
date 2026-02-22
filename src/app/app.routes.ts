@@ -19,9 +19,14 @@ export const routes: Routes = [
         children: [{
             path: '',
             loadComponent: () => import('./pages/home/home').then(m => m.Home)
-        }],
-        canActivate:[authGuard],
-        canActivateChild:[authChiledGuard]
+        },
+        {
+            path: "savedJsobs",
+            loadComponent: () =>import("./pages/saved-jobs/saved-jobs").then(m => m.SavedJobs)
+        }
+        ],
+        canActivate: [authGuard],
+        canActivateChild: [authChiledGuard]
     },
     {
         path: "login",

@@ -44,7 +44,7 @@ export class Form {
       this.authservice.signUp(name!,email!,password!).subscribe({
         next: (user) => {
           localStorage.setItem("user", user.id.toString())
-          this.redirector.navigator("/home")
+          this.redirector.navigator("/signed")
         },
         error: (err) => {
           console.log(err);

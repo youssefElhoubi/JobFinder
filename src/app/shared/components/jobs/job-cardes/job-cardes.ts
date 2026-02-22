@@ -25,7 +25,6 @@ export class JobCardes {
     this.savedJobservice.findSavedJob(offerId, user).pipe(
       switchMap((value) => {
         if (value.length !== 0) {
-          console.log(value.length !== 0);
           
           showToast("you have alredy added thisjob to user saved list", false);
           return EMPTY; 
