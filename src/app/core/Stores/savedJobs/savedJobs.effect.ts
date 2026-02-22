@@ -18,3 +18,16 @@ export const savedJobsEffect = createEffect((
 
     )
 }, { functional: true })
+
+export const removeJobEffect = createEffect((
+    action$ = inject(Actions), savedJobService = inject(SavedJobs),
+)=>{
+    return action$.pipe(
+        ofType(savedJobsAction.removeJob),
+        switchMap(({id})=>{
+            return savedJobService.deleteSavedJob(id).pipe(
+                map(() => savedJobsAction.loadJobs())
+            );
+        })
+    )
+}, { functional: true })

@@ -12,7 +12,7 @@ import { urlEffect } from './core/Stores/url/url.effect';
 import { urlFeature } from './core/Stores/url/url.feature';
 import { pagechangeEffect } from './core/Stores/url/pagechange.effect';
 import { saveJobInterceptor } from './core/interceptors/jobs/save-job-interceptor';
-import { savedJobsEffect } from './core/Stores/savedJobs/savedJobs.effect';
+import { removeJobEffect, savedJobsEffect } from './core/Stores/savedJobs/savedJobs.effect';
 import { savedJobsFeature } from './core/Stores/savedJobs/savedJobs.feature';
 
 
@@ -31,7 +31,7 @@ export const appConfig: ApplicationConfig = {
       [urlFeature.name]: urlFeature.reducer,
       [savedJobsFeature.name]: savedJobsFeature.reducer
     }),
-    provideEffects({urlEffect,pagechangeEffect,savedJobsEffect}),
+    provideEffects({urlEffect,pagechangeEffect,savedJobsEffect,removeJobEffect}),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 };
