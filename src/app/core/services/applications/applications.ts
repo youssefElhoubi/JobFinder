@@ -16,4 +16,12 @@ export class Applications {
     }
     return this.http.post<application>(`${environment.api}application`,candidate);
   }
+  
+  userApplications(id:string):Observable<application[]>{
+    return this.http.get<application[]>(`${environment.api}application`,{
+      params:{
+        userId:id
+      }
+    });
+  }
 }

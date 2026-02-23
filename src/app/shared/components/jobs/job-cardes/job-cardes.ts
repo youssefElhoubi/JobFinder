@@ -4,9 +4,9 @@ import { faBookmark as faRegularBookmark } from '@fortawesome/free-regular-svg-i
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 import { JobService } from './../../../../core/services/job/jobService';
 import { SavedJobs } from '../../../../core/services/job/saved-jobs';
-import Swal from 'sweetalert2';
 import { EMPTY, of, switchMap } from 'rxjs';
 import { showToast } from '../../../popUps/swalPopUps';
+import { Applications } from '../../../../core/services/applications/applications';
 
 @Component({
   selector: 'app-job-cardes',
@@ -17,6 +17,8 @@ import { showToast } from '../../../popUps/swalPopUps';
 export class JobCardes {
   private jobService = inject(JobService);
   private savedJobservice = inject(SavedJobs);
+  private applicationsService = inject(Applications);
+
   @Input() job!: Result
   bookmark = faRegularBookmark
   saveJobPost(offerId: string, title: string, company: string, location: string) {
@@ -25,21 +27,38 @@ export class JobCardes {
     this.savedJobservice.findSavedJob(offerId, user).pipe(
       switchMap((value) => {
         if (value.length !== 0) {
-          
+
           showToast("you have alredy added thisjob to user saved list", false);
-          return EMPTY; 
+          return EMPTY;
         }
         return this.jobService.saveJob(offerId, title, company, location);
       })
     ).subscribe({
       next: () => {
-        showToast("Job saved successfully!",true)
+        showToast("Job saved successfully!", true)
       },
       error: (err) => {
         console.log(err);
       }
     });
 
+  }
+  apply(offerId: string,
+    title: string,
+    company: string,
+    location: string,
+    url: string) {
+    const application = {
+      userId: localStorage.getItem("user") || "",
+      offerId,
+      title,
+      company,
+      location,
+      url,
+      status: "pending ",
+    }
+    this.applicationsService.apply(application).subscribe().unsubscribe();
+    window.open(url);
   }
 
 }

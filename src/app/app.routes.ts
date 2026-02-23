@@ -23,7 +23,11 @@ export const routes: Routes = [
         {
             path: "savedJsobs",
             loadComponent: () =>import("./pages/saved-jobs/saved-jobs").then(m => m.SavedJobs)
-        }
+        },
+        {
+            path: "applications",
+            loadComponent: () =>import("./pages/application-page/application-page").then(m => m.ApplicationPage)
+        },
         ],
         canActivate: [authGuard],
         canActivateChild: [authChiledGuard]

@@ -1,8 +1,7 @@
 export interface application {
     id: number
-    userId: number
+    userId: string
     offerId: string
-    apiSource: string
     title: string
     company: string
     location: string
