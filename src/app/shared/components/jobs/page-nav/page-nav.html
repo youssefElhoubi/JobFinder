@@ -1,18 +1,31 @@
-<div class="flex justify-center items-center gap-2">
+<div class="flex justify-center items-center gap-2 mt-8">
     <button
-        class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-gray-100 disabled:opacity-50">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-5 h-5">
+        [disabled]="(page$ | async) === 1"
+        (click)="prevPage()"
+        class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>
     </button>
-    <!-- @for (item of (jobs$|async); track $index) {
-    <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-lg">1</button>
-    } -->
+
+    @for (pageNum of (pagesArray$ | async); track pageNum) {
+        <button 
+            (click)="goToPage(pageNum)"
+            [class.bg-blue-600]="pageNum === (page$ | async)"
+            [class.text-white]="pageNum === (page$ | async)"
+            [class.border-blue-600]="pageNum === (page$ | async)"
+            [class.bg-white]="pageNum !== (page$ | async)"
+            [class.text-gray-600]="pageNum !== (page$ | async)"
+            class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 font-bold shadow-sm hover:bg-gray-100 transition-colors">
+            {{ pageNum }}
+        </button>
+    }
+
     <button
-        class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-gray-100">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-5 h-5">
+        [disabled]="(page$ | async) === (totalPages$ | async)"
+        (click)="nextPage()"
+        class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
         </svg>
     </button>
