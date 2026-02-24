@@ -1,6 +1,6 @@
 <div class="container mx-auto px-4 py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @for (app of applications; track $index) {
+        @for (app of (userApplications$|async); track $index) {
         <app-application-card [applications]="app"></app-application-card>
     }
     </div>

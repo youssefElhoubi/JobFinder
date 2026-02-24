@@ -57,7 +57,7 @@ export class JobCardes {
       url,
       status: "pending ",
     }
-    this.applicationsService.apply(application).subscribe().unsubscribe();
+    this.applicationsService.apply(application).subscribe();
     window.open(url);
   }
 

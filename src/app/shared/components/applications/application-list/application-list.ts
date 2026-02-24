@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { application } from '../../../models/application';
 import { ApplicationCard } from "../application-card/application-card";
+import { Applications } from '../../../../core/services/applications/applications';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-application-list',
-  imports: [ApplicationCard],
+  imports: [ApplicationCard,AsyncPipe],
   templateUrl: './application-list.html',
   styleUrl: './application-list.css',
 })
 export class ApplicationList {
-applications: application[] = []
-getStatusClass(status: string): string {
+  private applicationsService = inject(Applications);
+  userApplications$ = this.applicationsService.userApplications(localStorage.getItem("user")||"null")
+  applications: application[] = []
+  getStatusClass(status: string): string {
     const baseClasses = 'px-2.5 py-0.5 rounded-full text-xs font-medium uppercase tracking-wide';
     switch (status.toLowerCase()) {
       case 'accepted': return `${baseClasses} bg-green-100 text-green-800`;

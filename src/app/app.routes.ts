@@ -33,6 +33,10 @@ export const routes: Routes = [
         canActivateChild: [authChiledGuard]
     },
     {
+        path:"**",
+        loadComponent: () =>import("./pages/not-found/not-found").then(m => m.NotFound)
+    },    
+    {
         path: "login",
         loadComponent: () => import("./pages/log-in/log-in").then(m => m.LogIN),
     },

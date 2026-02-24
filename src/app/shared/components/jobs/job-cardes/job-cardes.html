@@ -38,7 +38,7 @@
                 <fa-icon [icon]="bookmark" (click)="saveJobPost(job.id,job.title,job.company.display_name,job.location.display_name)"></fa-icon>
             </div>
 
-            <button 
+            <button (click)="apply(job.id,job.title,job.company.display_name,job.location.display_name,job.redirect_url)"
                 class="text-primary font-semibold hover:text-accent hover:underline flex items-center gap-1 transition">
                 Apply
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
