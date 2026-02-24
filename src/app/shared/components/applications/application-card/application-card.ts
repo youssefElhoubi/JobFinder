@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { application } from '../../../models/application';
 import { DatePipe } from '@angular/common';
+import { Applications } from '../../../../core/services/applications/applications';
 
 @Component({
   selector: 'app-application-card',
@@ -10,6 +11,26 @@ import { DatePipe } from '@angular/common';
 })
 export class ApplicationCard {
   @Input() applications!: application
+  private applicationsService = inject(Applications)
+  
+  onStatusChange(event: Event, app: application) {
+    // 1. Get the new value from the dropdown
+    const selectElement = event.target as HTMLSelectElement;
+    const newStatus = selectElement.value;
+
+    // 2. Update the UI immediately so it feels fast
+    app.status = newStatus;
+
+    // 3. Send the update to your backend
+    // (Assuming you have an update method in your service)
+    this.applicationsService.updateStatus(app.id, newStatus).subscribe({
+      next: () => console.log(`Status for ${app.title} updated to ${newStatus}`),
+      error: (err) => {
+        console.error('Failed to update status', err);
+        // Optional: Revert the UI back to the old status if the API fails
+      }
+    });
+  }
 
   // Helper function to dynamically style the status badge
   getStatusClass(status: string): string {

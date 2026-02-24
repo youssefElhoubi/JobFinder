@@ -24,4 +24,13 @@ export class Applications {
       }
     });
   }
+  updateStatus(applicationId: number, newStatus: string): Observable<application> {
+    // We target the specific application ID in the URL
+    const url = `${environment.api}application/${applicationId}`;
+    
+    // We send only the field that needs to be updated
+    const body = { status: newStatus };
+
+    return this.http.patch<application>(url, body);
+  }
 }
