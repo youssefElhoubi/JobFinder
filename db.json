@@ -57,6 +57,17 @@
       "url": "https://www.adzuna.at/land/ad/5640847094?se=qhpFJ7IQ8RGHm4c4GRrdVA&utm_medium=api&utm_source=ce0d2c23&v=A08C6C90F564B57BE74759DB12CFF8F7AECA095D",
       "status": "accepted",
       "dateAdded": 1771849320997
+    },
+    {
+      "id": "d2e8",
+      "userId": "",
+      "offerId": "5640847094",
+      "title": "Java-Entwickler:in",
+      "company": "TAC Informationstechnologie GmbH",
+      "location": "Österreich",
+      "url": "https://www.adzuna.at/land/ad/5640847094?se=ftZH5S4R8RG-xarHZ9jJgw&utm_medium=api&utm_source=ce0d2c23&v=A08C6C90F564B57BE74759DB12CFF8F7AECA095D",
+      "status": "pending ",
+      "dateAdded": 1771902857941
     }
   ]
 }
